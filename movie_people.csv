@@ -1,5 +1,4 @@
-movie_id,person_id,role_type,character_name
-1,1,actor,Musiker Erik Paulsen
+1,1,"actor,director",Musiker Erik Paulsen
 1,2,actor,"Karin, Tochter Brückner"
 1,3,actor,"Sebald, Sohn Brückner"
 1,4,actor,Eriks Sohn
@@ -93,7 +92,7 @@ movie_id,person_id,role_type,character_name
 13,98,actor,Zé Nilo
 13,99,actor,Jorge
 13,100,director,
-14,101,actor,Joseph Briteman
+14,101,"actor,director",Joseph Briteman
 14,102,actor,Horst Himmelferger
 14,103,actor,Eva
 14,104,actor,Pauline
@@ -103,7 +102,6 @@ movie_id,person_id,role_type,character_name
 14,108,actor,Jasmine
 14,109,actor,Young Joseph
 14,110,actor,Mariam
-14,101,director,
 15,111,actor,Chase
 15,112,actor,Andy
 15,113,actor,Annie
@@ -111,10 +109,9 @@ movie_id,person_id,role_type,character_name
 15,115,actor,Emerson
 15,116,actor,Girl in Pink Dress
 15,117,actor,Matt
-15,118,actor,Marlon the motorcycle man
+15,118,"actor,director",Marlon the motorcycle man
 15,119,actor,Elvis
 15,120,actor,Roger
-15,118,director,
 16,121,actor,Barkya
 16,122,actor,Gajanan
 16,123,actor,Durva's Grandmother
@@ -391,7 +388,7 @@ movie_id,person_id,role_type,character_name
 56,437,actor,Sonja
 56,438,actor,Kristen
 56,439,director,
-57,440,actor,Swede Levov
+57,440,"actor,director",Swede Levov
 57,441,actor,Dawn Levov
 57,442,actor,Merry Levov
 57,443,actor,Lou Levov
@@ -401,8 +398,7 @@ movie_id,person_id,role_type,character_name
 57,447,actor,Rita Cohen
 57,448,actor,Merry (12 Years Old)
 57,449,actor,Sylvia Levov
-57,440,director,
-58,450,actor,Lionel Essrog
+58,450,"actor,director",Lionel Essrog
 58,451,actor,Laura Rose
 58,452,actor,Moses Randolph
 58,453,actor,Paul Randolph
@@ -412,7 +408,6 @@ movie_id,person_id,role_type,character_name
 58,457,actor,Tony Vermonte
 58,458,actor,Danny Fantl
 58,459,actor,William Lieberman
-58,450,director,
 59,460,director,
 60,461,actor,Daniel Culp
 60,461,actor,8612
@@ -501,7 +496,7 @@ movie_id,person_id,role_type,character_name
 67,534,actor,Misha Strumann
 67,535,actor,Isaac Moritz
 67,536,director,
-68,537,actor,Kate
+68,537,"actor,director",Kate
 68,538,actor,Mark
 68,539,actor,Walter
 68,540,actor,Charlie
@@ -511,7 +506,6 @@ movie_id,person_id,role_type,character_name
 68,544,actor,Jerome
 68,545,actor,Sam
 68,546,actor,Laurie
-68,537,director,
 69,547,actor,Shazam
 69,548,actor,Dr. Sivana
 69,549,actor,Billy Batson
@@ -677,7 +671,7 @@ movie_id,person_id,role_type,character_name
 85,703,actor,Clifton's Brother
 85,704,director,
 86,661,actor,Ponch
-86,705,actor,Jon
+86,705,"actor,director",Jon
 86,431,actor,Ray Kurtz
 86,494,actor,Ava Perez
 86,262,actor,Lindsey Taylor
@@ -686,7 +680,6 @@ movie_id,person_id,role_type,character_name
 86,707,actor,Parish
 86,708,actor,Brian Grieves
 86,709,actor,Captain Jane Lindel
-86,705,director,
 87,710,actor,Julia
 87,711,actor,Holt
 87,712,actor,Gabriel
@@ -705,10 +698,9 @@ movie_id,person_id,role_type,character_name
 88,724,actor,Sweet-Toed Toad
 88,725,actor,Beesha Balti
 88,726,actor,Bubsy Mulch
-88,727,actor,Mr. Napkin
+88,727,"actor,director",Mr. Napkin
 88,728,actor,Wayne John John-John
 88,729,actor,Tuna Remnant
-88,727,director,
 88,730,director,
 88,731,director,
 89,388,actor,John Kelly
@@ -763,13 +755,12 @@ movie_id,person_id,role_type,character_name
 93,777,actor,Denise
 93,778,director,
 94,779,actor,Interviewer
-94,780,actor,Interviewer
+94,780,"actor,director",Interviewer
 94,781,actor,Interviewer
 94,782,actor,Interviewer
 94,783,actor,Interviewer
 94,784,actor,Interviewer
 94,785,actor,Nerd of the Undead
-94,780,director,
 95,786,actor,Norman
 95,787,director,
 96,788,actor,Scott Huffman
@@ -796,7 +787,7 @@ movie_id,person_id,role_type,character_name
 98,812,actor,Beglan
 98,813,actor,John Edensor Littlewood
 98,814,director,
-99,815,actor,Miles Davis
+99,815,"actor,director",Miles Davis
 99,816,actor,Frances Taylor
 99,440,actor,Dave Braden
 99,817,actor,Harper
@@ -806,7 +797,6 @@ movie_id,person_id,role_type,character_name
 99,821,actor,Dieter
 99,822,actor,Bartender
 99,823,actor,Manager
-99,815,director,
 100,827,director,
 101,710,actor,Sonja
 101,828,actor,Draygan
@@ -897,7 +887,7 @@ movie_id,person_id,role_type,character_name
 108,910,actor,Young Max
 108,911,actor,Young Ari
 108,912,director,
-109,913,actor,"The Pope, Rembrandt, Van Gogh's mother"
+109,913,"actor,director","The Pope, Rembrandt, Van Gogh's mother"
 109,914,actor,Pope Joan
 109,915,actor,Cardinal del Monte
 109,916,actor,Abelard
@@ -907,18 +897,16 @@ movie_id,person_id,role_type,character_name
 109,920,actor,Caravaggio
 109,921,actor,Caravaggio
 109,922,actor,Galileo's daughter
-109,913,director,
 110,923,actor,Krystal Bryant
 110,432,actor,Taylor Ogburn
 110,924,actor,Willie
 110,925,actor,Campbell Ogburn
 110,926,actor,Poppy Ogburn
-110,927,actor,Dr. Wyatt Ogburn
+110,927,"actor,director",Dr. Wyatt Ogburn
 110,928,actor,Bobby Bryant
 110,929,actor,Bo
 110,930,actor,Dr. Lyle Farley
 110,931,actor,Vera Greenwood
-110,927,director,
 111,932,actor,Pee-wee Herman
 111,933,actor,Yul
 111,933,actor,Party Coordinator
@@ -954,7 +942,7 @@ movie_id,person_id,role_type,character_name
 113,963,actor,Lone Star
 113,964,actor,Mitchell
 113,965,director,
-114,966,actor,Travis Brooks
+114,966,"actor,director",Travis Brooks
 114,967,actor,Nate Conway
 114,968,actor,Chris Conway
 114,969,actor,Jen Lilly
@@ -965,7 +953,6 @@ movie_id,person_id,role_type,character_name
 114,974,actor,Darren Summers
 114,975,actor,Rachel Redwood
 114,976,director,
-114,966,director,
 115,977,actor,Bouncer
 115,978,actor,Shuttle Pilot
 115,979,actor,Maintenance Manager
@@ -1000,7 +987,7 @@ movie_id,person_id,role_type,character_name
 117,1007,actor,Ida Bass
 117,1008,actor,Grace
 117,1009,director,
-118,1010,actor,Thorny
+118,1010,"actor,director",Thorny
 118,1011,actor,Farva
 118,1012,actor,Mac
 118,1013,actor,Foster
@@ -1010,7 +997,6 @@ movie_id,person_id,role_type,character_name
 118,1017,actor,Trooper Wagner
 118,1018,actor,Captain O'Hagan
 118,1019,actor,Ursula
-118,1010,director,
 119,1020,actor,Diana Dahlan
 119,1021,actor,Karim
 119,1022,actor,Investigating Officer Talib
@@ -1178,7 +1164,7 @@ movie_id,person_id,role_type,character_name
 134,1173,actor,Napoleon
 134,1174,actor,Tiffany
 134,1175,director,
-135,1176,actor,Nick Knight
+135,1176,"actor,director",Nick Knight
 135,1177,actor,Owen Hansel
 135,1178,actor,Dewey Chatem
 135,1179,actor,Brooke Carrington
@@ -1188,8 +1174,7 @@ movie_id,person_id,role_type,character_name
 135,1183,actor,Beth S - Joe Dick TV Executive
 135,1184,actor,Best Player Audience Member
 135,1185,actor,Huge Guy
-135,1176,director,
-136,1186,actor,Harley Altmeyer
+136,1186,"actor,director",Harley Altmeyer
 136,1187,actor,Callie Mercer
 136,1188,actor,Amber Altmeyer
 136,1189,actor,Misty Altmeyer
@@ -1199,7 +1184,6 @@ movie_id,person_id,role_type,character_name
 136,487,actor,Bonnie Altmeyer
 136,1193,actor,Uncle Mike
 136,1194,actor,Rick
-136,1186,director,
 137,1195,actor,Batman
 137,1195,actor,Bruce Wayne
 137,580,actor,Wonder Woman
@@ -1240,8 +1224,7 @@ movie_id,person_id,role_type,character_name
 140,1227,actor,Martin
 140,1228,actor,Marianne Peters
 140,1201,director,
-141,1229,actor,Dominatrix
-141,1229,director,
+141,1229,"actor,director",Dominatrix
 142,388,actor,Charles King
 142,1230,actor,Dana Canedy
 142,1231,actor,Jordan
@@ -1271,8 +1254,7 @@ movie_id,person_id,role_type,character_name
 143,1248,actor,Santos club's coach
 143,1249,director,
 143,1250,director,
-144,1252,actor,Giuseppe Russo
-144,1252,director,
+144,1252,"actor,director",Giuseppe Russo
 145,1255,director,
 146,1261,actor,Item Girl
 146,1266,director,
@@ -1338,13 +1320,12 @@ movie_id,person_id,role_type,character_name
 157,1332,actor,Andrew
 157,1333,actor,Cardinal Sinibaldi
 157,1334,actor,Pomona
-157,1335,actor,Sean
+157,1335,"actor,director",Sean
 157,1336,actor,Nicole
 157,1337,actor,Roger
 157,1338,actor,Barbara
 157,1339,actor,Maria
 157,1340,actor,Vincent
-157,1335,director,
 158,1341,actor,Johnny
 158,1342,actor,Ravel
 158,1343,actor,Ana Flávia
