@@ -30,4 +30,6 @@ Data is form IMDB public database. We get the 200 movie data, corresponding acto
 6.  **201 Created for POST**
 	* Implement **synchronous** `POST /movies` and `POST /people` to return **201 Created** with the `Location` header.
 7.  **202 Accepted + Asynchronous Implementation + Polling**
-	* Implement **asynchronous creation**  for `POST /movies`.
+	* Implement **asynchronous task processing** for `POST /movies/{movie_id}/generate-share-card`.
+	* Return **202 Accepted** with `job_id` and `status_url` for polling.
+	* Implement `GET /movies/{movie_id}/share-card-jobs/{job_id}` to check job status and retrieve the generated card URL upon completion.
