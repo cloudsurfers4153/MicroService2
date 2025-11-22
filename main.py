@@ -635,9 +635,15 @@ def root():
 
 if __name__ == "__main__":
     import uvicorn
+    import os
+    
+    # Cloud Run PORT environment variable
+    port = int(os.getenv("PORT", "8080"))
+    host = os.getenv("HOST", "0.0.0.0")
+    
     uvicorn.run(
         "main:app",
-        host="127.0.0.1",
-        port=8000,
-        reload=True
+        host=host,
+        port=port,
+        reload=False
     )
