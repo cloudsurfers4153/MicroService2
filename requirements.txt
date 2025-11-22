@@ -1,6 +1,7 @@
 annotated-types==0.7.0
 anyio==4.11.0
 click==8.3.0
+cloud-sql-python-connector[pymysql]==1.11.0
 fastapi==0.118.0
 h11==0.16.0
 idna==3.10
@@ -8,6 +9,7 @@ pandas==2.2.3
 pydantic==2.11.10
 pydantic_core==2.33.2
 pymysql==1.1.1
+python-dotenv==1.0.0
 sniffio==1.3.1
 sqlalchemy==2.0.36
 starlette==0.48.0
