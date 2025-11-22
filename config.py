@@ -19,7 +19,7 @@ class Config:
     USE_CLOUD_SQL_CONNECTOR: bool = os.getenv("USE_CLOUD_SQL_CONNECTOR", "false").lower() == "true"
     
     APP_HOST: str = os.getenv("APP_HOST", "0.0.0.0")
-    APP_PORT: int = int(os.getenv("APP_PORT", "8000"))
+    APP_PORT: int = int(os.getenv("APP_PORT", "8080"))
     
     @classmethod
     def get_database_url(cls) -> Optional[str]:
