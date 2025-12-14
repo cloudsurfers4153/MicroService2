@@ -8,8 +8,12 @@ import hashlib
 import random
 import string
 import logging
+import json
+import os
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
+
+from google.cloud import pubsub_v1
 
 from models.movie import MovieCreate, MovieUpdate, MovieRead
 from models.person import PersonCreate, PersonUpdate, PersonRead
@@ -22,6 +26,24 @@ import uuid
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 card_jobs = {}  # job_id -> job info
+
+# Pub/Sub configuration for movie events
+PUBSUB_PROJECT = os.getenv("GCP_PROJECT")
+MOVIE_EVENTS_TOPIC = os.getenv("MS2_MOVIE_TOPIC")
+_publisher = None
+_movie_topic_path = None
+
+if PUBSUB_PROJECT and MOVIE_EVENTS_TOPIC:
+    try:
+        _publisher = pubsub_v1.PublisherClient()
+        _movie_topic_path = _publisher.topic_path(PUBSUB_PROJECT, MOVIE_EVENTS_TOPIC)
+        logger.info("Pub/Sub movie events enabled for topic %s", _movie_topic_path)
+    except Exception as exc:  # pragma: no cover - defensive init
+        logger.error("Failed to initialize Pub/Sub publisher: %s", exc)
+        _publisher = None
+        _movie_topic_path = None
+else:
+    logger.info("Pub/Sub movie events disabled (missing GCP_PROJECT or MS2_MOVIE_TOPIC).")
 
 # -----------------------------------------------------------------------------
 # Helper Functions
@@ -36,6 +58,37 @@ def generate_etag(movie: Movie) -> str:
 def generate_version_hash() -> str:
     """Generate a random version hash (8 chars hex)."""
     return ''.join(random.choices(string.hexdigits.lower(), k=8))
+
+
+def publish_movie_event(event: str, movie: Movie) -> None:
+    """
+    Publish movie create/update events to Pub/Sub.
+    Best-effort: logs on failure and does not block the request.
+    """
+    if not _publisher or not _movie_topic_path:
+        return
+
+    payload = {
+        "event": event,
+        "movie": {
+            "id": movie.id,
+            "title": movie.title,
+            "genre": movie.genre,
+            "year": movie.year,
+            "version": movie.version,
+            "processing_status": movie.processing_status,
+            "updated_at": movie.updated_at.isoformat() if movie.updated_at else None,
+            "created_at": movie.created_at.isoformat() if movie.created_at else None,
+        },
+    }
+
+    try:
+        future = _publisher.publish(_movie_topic_path, data=json.dumps(payload).encode("utf-8"))
+        future.add_done_callback(
+            lambda f: f.exception() and logger.error("Pub/Sub publish failed: %s", f.exception())
+        )
+    except Exception as exc:  # pragma: no cover - defensive path
+        logger.error("Failed to publish movie event: %s", exc)
 
 
 # -----------------------------------------------------------------------------
@@ -173,6 +226,8 @@ def create_movie(
     
     response.headers["Location"] = f"/movies/{new_movie.id}"
     
+    publish_movie_event("movie.created", new_movie)
+    
     return MovieRead(
         id=new_movie.id,
         title=new_movie.title,
@@ -249,6 +304,7 @@ def update_movie(
     
     db.commit()
     db.refresh(movie)
+    publish_movie_event("movie.updated", movie)
     
     return MovieRead(
         id=movie.id,
